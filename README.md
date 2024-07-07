@@ -82,7 +82,7 @@ In the <i>Gallery</i> pane, select the <i>VRT Clients & Peripherals</i> menu, dr
 <br />
   <img src="https://i.imgur.com/JzGgS4D.png" height="60%" width="60%" alt="save network topology"/>
 <br />
- Other applications can be used, like Figjam (which will involve manually uploading component images), an easier alternative will be Draw.io, which comes preinstalled with network elements to work with. 
+ Draw.io is a great alternative to LibreDraw, it comes preinstalled with network elements to work with. 
   <br/>
 
 
