@@ -3,7 +3,7 @@
 
 <h2>Description</h2>
 
-In this lab, I designed both a physical and a logical network topology with LibreDraw, an open source vector graphic editor. 
+In this lab, I designed both a mock physical and logical network topology with LibreDraw, an open-source vector graphic editor. 
 <br />
 
 
@@ -19,81 +19,73 @@ In this lab, I designed both a physical and a logical network topology with Libr
 <h2>Project walk-through</h2>
 
 <p align="center">
-<br> We aim to simulate this network infrastructure <br/>
-<img src="https://i.imgur.com/2fyEvRb.png" height="80%" width="80%" alt="Network infrastructure diagram"/>
+<br> Click Start, and from the menu, open LibreDraw <br/>
+<img src="https://i.imgur.com/O3aoXA6.png" height="60%" width="60%" alt="open Librdraw"/>
 <br />
 <br />
-Create a Virtual Machine (VM) for Domain Controller  <br/>
-<img src="https://i.imgur.com/PMcLnnq.png" height="80%" width="80%" alt="Create VM"/>
+Ensure the Gallery tab is displayed. To have space in the application, the Pages pane can be closed  <br/>
+<img src="https://i.imgur.com/3PsUqhn.png" height="60%" width="60%" alt="Application pane"/>
 <br />
 <br />
-Configure network adapters 1 and 2 to use NAT (Network Address Translation) & Internal, respectively <br/>
-<img src="https://i.imgur.com/JlQMoa9.png" height="80%" width="80%" alt="network adapters"/>
+Draw a building with 2 floors, a ground floor, and a basement. 
+Then in the Gallery pane, scroll down and select the VRT Networking & Communications menu <br/>
+<img src="https://i.imgur.com/cbDfmFo.png" height="60%" width="60%" alt="draw building"/>
 <br />
 <br />
-Mount & Install Windows Server 2019 on the Domain Controller's VM <br/>
-<img src="https://i.imgur.com/gs9kDks.png" height="80%" width="80%" alt="install srv2019"/>
+Add a switch to each floor by dragging the switch from the Gallery to the appropriate floor. The switch icon will need to be resized accordingly <br/>
+<img src="https://i.imgur.com/Ih5A1Vg.png" height="60%" width="60%" alt="add switches"/>
 <br />
 <br />
 <p align="center">
-  I replaced the APIPA address 169.254.17.146 with the following scope, for the internal network
-- <b><i>IP address of 172.16.0.1 / Subnet mask 255.255.255.0 / Default Gateway (empty) / DNS - 127.0.0.1 </b></i>   <br/>
-<img src="https://i.imgur.com/VoTVYK3.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+In the Gallery pane, select the Router icon and place it in the Basement <br/>
+<img src="https://i.imgur.com/afLzJdA.png" height="60%" width="60%" alt="Add router"/>
 <br />
 <br />
-First, install and configure Active Directory Domain Services, and then create a dedicated admin account 
+From the Gallery, pane select the cloud icon - Wireless Network /Internet and place it outside the Basement. 
   <br/>
-<img src="https://i.imgur.com/szGU6Cz.png" height="80%" width="80%" alt="Active Directory Installation"/>
+<img src="https://i.imgur.com/ENYWbX0.png" height="60%" width="60%" alt="add cloud icon"/>
 <br />
 <br />
- Install and configure NAT and routing so that the Windows 10 client on the private network can access the internet through the Domain Controller  
+Select the Connectors fly-out menu on the left pane, and click Connector with Arrows.
   <br />
-<img src="https://i.imgur.com/lm5n7oZ.png" height="80%" width="80%" alt="NAT and routing configuration"/>
+<img src="https://i.imgur.com/xI7JwYR.png" height="60%" width="60%" alt="connectors"/>
 <br />
   <br />
-Set up DHCP and add scope information so that the Windows 10 client can receive an IP address
+Using the selected connector connect all the devices, ensuring all of the connectors run through the Cabling Conduit
   <br />
 <br />
-<img src="https://i.imgur.com/JBym9c0.png" height="80%" width="80%" alt="set dhcp scope"/>
+<img src="https://i.imgur.com/5ZVWboq.png" height="60%" width="60%" alt="connector cabling"/>
 <br />
    <br />
-Add users to Active Directory using a .ps1 script
+Select the connections from the Basement to the Floor 2 switch
   <br/>
  <br />
-<img src="https://i.imgur.com/uLYhb7S.png" height="80%" width="80%" alt="add users"/>
+<img src="https://i.imgur.com/XWgx0GC.png" height="60%" width="60%" alt="basement2floorswitch"/>
 <br /> 
   <br />
-Active directory users are created
+Select the Line Color fly-out menu and click Red to change the colour of the connection.
+In this example, the connection's colour was changed to red, indicating that a fibre connection was used. The black connections can be used to indicate that a copper ethernet cable is used.
   <br/>
  <br />
-<img src="https://i.imgur.com/xPRysyJ.png" height="80%" width="80%" alt="created user"/>
+<img src="https://i.imgur.com/7BxKT7p.png" height="60%" width="60%" alt="connector color"/>
 <br /> 
 <br />
-Create a second VM for our Windows 10 client (Client 1), its network adapter is set to connect to the internal network
+In the Gallery pane, select the Wireless Router, drag it to the Ground floor and connect it to the switch
   <br/>
-<img src="https://i.imgur.com/GfwHrGN.png" height="80%" width="80%" alt="Active Directory Installation"/>
+<img src="https://i.imgur.com/69T3iPh.png" height="60%" width="60%" alt="wireless router"/>
 <br />
 <br />
-While testing network connectivity, I realized that I forgot to add the DC router’s IP address to Client1’s DHCP configuration. As a result, there was no default gateway. Let’s fix that
+In the Gallery pane, select the VRT Servers menu, drag a Directory Server to the Basement and connect it to the switch using an appropriate connector
   <br/>
-<img src="https://i.imgur.com/qzwW3gG.png" height="80%" width="80%" alt="Active Directory Installation"/>
+<img src="https://i.imgur.com/4Ke4oer.png" height="60%" width="60%" alt="add Directory server"/>
 <br />
-I have rectified the issue and am now using the ping command to confirm that everything works 
+In the Gallery pane, select the VRT Clients & Peripherals menu, drag a Desktop to Floor 2, connect it to the switch with the appropriate connector, and save the image
   <br/>
-<img src="https://i.imgur.com/buJcmCT.png" height="80%" width="80%" alt="Active Directory Installation"/>
+<img src="https://i.imgur.com/V3WRABN.png" height="60%" width="60%" alt="connect peripheral"/>
 <br />
-  <img src="https://i.imgur.com/48lvxGs.png" height="80%" width="80%" alt="Active Directory Installation"/>
+  <img src="https://i.imgur.com/JzGgS4D.png" height="60%" width="60%" alt="save network topology"/>
 <br />
- Connect Client1 to the Domain
+ Other applications can be used, like Figjam (which will involve manually uploading component images), an easier alternative will be Draw.io
   <br/>
-<img src="https://i.imgur.com/bqHtpRR.png" height="80%" width="80%" alt="Active Directory Installation"/>
-<br />
-<br />
-Client1 is configured correctly 
-  <br/>
-<img src="https://i.imgur.com/i0a7Cy5.png" height="80%" width="80%" alt="Active Directory Installation"/>
-<br />
-We can log in using one of the random users created with the .ps1 script 
-  <br/>
-<img src="https://i.imgur.com/wRHIAt2.png" height="80%" width="80%" alt="Active Directory Installation"/>
-<br />
+
+
