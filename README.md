@@ -21,7 +21,7 @@ In this lab, I designed both a mock physical and logical network topology with L
 <p align="center">
 <br> Click Start, and from the menu, open LibreDraw<br/>
 <br><i>(An installation file containing network elements was added to the extension manager of LibreDraw)</i> <br/>
-<img src="https://i.imgur.com/O3aoXA6.png" height="60%" width="60%" alt="open Librdraw"/>
+<img src="https://i.postimg.cc/Y9yR5zzL/Screenshot-2024-07-05-091426.png" height="60%" width="60%" alt="open Librdraw"/>
 <br />
 <br />
 Draw a building with 2 floors, a ground floor, and a basement. 
